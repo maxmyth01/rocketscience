@@ -14,6 +14,8 @@ Ve = sqrt(2*Me*G/Re)
 
 print("predicted escape velocity is", Ve, "m/s")
 
+tz = Slider((10,400), 0, 5, 0, positioning="physical")
+
 earth = Planet(viewscale=0.000009)
-rocket = Rocket(earth, heading= radians(90), directiond=90, velocity=Ve, timezoom=2)
+rocket = Rocket(earth, heading= radians(90), directiond=90, velocity=Ve, timezoom=tz)
 earth.run(rocket)
