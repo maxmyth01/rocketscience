@@ -3,7 +3,10 @@
 #rocket1.py -- first rocket orbital program safe altitude
 
 from ggrocket import Rocket, Planet
+from ggame import *
 
-earth = Planet(radius=1737400 , planetmass=73500000000000000000000 , viewscale=0.000009, color=0xFF0000)
+earth = Planet(radius=1737400 , planetmass=73500000000000000000000 , viewscale=0.000009, color=0x00FFFF)
 rocket = Rocket(earth, altitude=100000, velocity=1632, timezoom=3)
+
+
 earth.run(rocket)
