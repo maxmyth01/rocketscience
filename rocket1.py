@@ -9,6 +9,6 @@ earth = Planet(radius=1737400 , planetmass=73500000000000000000000 , viewscale=0
 rocket = Rocket(earth, altitude=100000, velocity=1632, timezoom=3, thrust=4)
 
 
-App.listenKeyEvent('keydown','t', upThrust)
-App.listenKeyEvent('keydown','g', downThrust)
+#App.listenKeyEvent('keydown','t', upThrust)
+#App.listenKeyEvent('keydown','g', downThrust)
 earth.run(rocket)
