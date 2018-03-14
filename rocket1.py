@@ -5,15 +5,18 @@
 from ggrocket import Rocket, Planet
 from ggame import *
 
+ data = {}
+    data['thrust'] =0
+
 earth = Planet(radius=1737400 , planetmass=73500000000000000000000 , viewscale=0.000009, color=0x00FFFF)
 
-rocket = Rocket(earth, altitude=100000, velocity=1632, timezoom=3, thrust=0)
+rocket = Rocket(earth, altitude=100000, velocity=1632, timezoom=3, thrust=data['thrust'])
 
 def upThrust(event):
-    thrust += 1
+    data['thrust']  += 1
     
 def downThrust(event):
-    thrust -= 1
+    data['thrust']  -= 1
 
 App.listenKeyEvent('keydown','t', upThrust)
 App.listenKeyEvent('keydown','g', downThrust)
