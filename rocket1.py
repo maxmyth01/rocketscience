@@ -13,15 +13,15 @@ def thrust():
 
 earth = Planet(radius=1737400 , planetmass=73500000000000000000000 , viewscale=0.000009, color=0x00FFFF)
 
-rocket = Rocket(earth, altitude=100000, velocity=1632, timezoom=2, thrust = thrust )
+rocket = Rocket(earth, altitude=10000, velocity=1632, timezoom=2, thrust = thrust )
 
 
 
 def upThrust(event):
-    data['thrust']  += 1
+    data['thrust']  += 0.1
     
 def downThrust(event):
-    data['thrust']  -= 1
+    data['thrust']  -= 0.1
 
 App.listenKeyEvent('keydown','t', upThrust)
 App.listenKeyEvent('keydown','g', downThrust)
