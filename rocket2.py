@@ -19,5 +19,5 @@ print("predicted escape velocity is", Ve, "m/s")
 tz = Slider((10,400), 0, 5, 0, positioning="physical")
 
 
-rocket = Rocket(earth, heading= radians(90), directiond=90, velocity=11180, timezoom=tz)
+rocket = Rocket(earth, heading= radians(90), directiond=90, velocity=Ve, timezoom=tz)
 earth.run(rocket)
