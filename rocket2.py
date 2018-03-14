@@ -5,6 +5,6 @@
 from ggrocket import Rocket, Planet
 from math import radians
 
-earth = Planet()
-rocket = Rocket(earth, heading= radians(90), directiond=90, velocity=11190)
+earth = Planet(viewscale=0.000009)
+rocket = Rocket(earth, heading= radians(90), directiond=90, velocity=11190, timezoom=2)
 earth.run(rocket)
