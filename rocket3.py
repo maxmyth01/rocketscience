@@ -6,7 +6,7 @@ from ggrocket import Rocket, Planet
 from math import radians, sqrt, log
 from ggmath import InputButton, Timer, Slider
 
-earth = Planet(planetmass=0, viewscale = 0.000005) # no gavity for simplification
+earth = Planet( viewscale = 0.000005) # no gavity for simplification
 
 RocketStarted = False
 StartTime = None # to keep track of when burn started
