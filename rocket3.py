@@ -4,7 +4,7 @@
 
 from ggrocket import Rocket, Planet
 from math import radians, sqrt, log
-from ggmath import InputButton, Timer
+from ggmath import InputButton, Timer, Slider
 
 earth = Planet(planetass=0, veiwscale = 0.00005) # no gavity for simplification
 
@@ -44,9 +44,11 @@ def StartRocket():
     if not RocketStarted:
         RocketStarted= True
         StartTime = rocket.shiptime
-    
+
+
+tz = Slider((10,400), 0, 5, 0, positioning="physical")    
 start = InputButton((10,400), "START", StartRocket, positioning="physical", size=15)
 
-rocket = Rocket(earth, thrust=GetThrust, mass=me+mp)
+rocket = Rocket(earth, thrust=GetThrust, mass=me+mp, TimeZoom = tz)
 earth.run(rocket)
     
