@@ -30,7 +30,7 @@ def GetThrust():
     global RocketStarted
     if RocketStarted:
         BurnTime = rocket.shiptime - StartTime
-        if burnTime >= tburn:
+        if BurnTime >= tburn:
             RocketStarted = False
             return 0
         else:
