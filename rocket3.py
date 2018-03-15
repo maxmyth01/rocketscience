@@ -58,8 +58,8 @@ def GetMass():
 
 
 tz = Slider((10,400), 0, 5, 0, positioning="physical")    
-start = InputButton((10,400), "START", StartRocket, positioning="physical", size=15)
+start = InputButton((10,500), "START", StartRocket, positioning="physical", size=15)
 
-rocket = Rocket(earth, thrust=GetThrust, TimeZoom = tz, mass=GetMass)
+rocket = Rocket(earth, thrust=GetThrust, timezoom = tz, mass=GetMass)
 earth.run(rocket)
     
