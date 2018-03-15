@@ -17,7 +17,7 @@ BurnTime = 0
 me1 = 25600
 mp1 = 395700
 Ftotal1 = 6.444E6
-tburn = 180
+tburn1 = 180
 
 me2 = 3900
 mp2 = 92670
