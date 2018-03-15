@@ -25,6 +25,10 @@ tburn = 180  # burn time
 vmax = Ftotal*tburn/(me+mp)
 print("predicted final velocity (N's 2nd law), vmax: ", vmax, "m/s")
 
+# Vfianl based on Tsiolkovsky's Rocket Equation
+vmaxre = Ftotal*tburn/mp*log((me+mp)/me)
+print("Predicted final velocity (rocket Eqation), vmax: ",vmaxre, "m/s")
+
 def GetThrust():
     global BurnTime
     global RocketStarted
@@ -44,11 +48,18 @@ def StartRocket():
     if not RocketStarted:
         RocketStarted= True
         StartTime = rocket.shiptime
+        
+def GetMass():
+    global RocketStarted
+    if RocketStarted:
+        return me + mp*(tburn-BurnTime)/tburn
+    else:
+        return me +mp
 
 
 tz = Slider((10,400), 0, 5, 0, positioning="physical")    
 start = InputButton((10,400), "START", StartRocket, positioning="physical", size=15)
 
-rocket = Rocket(earth, thrust=GetThrust, mass=me+mp, TimeZoom = tz)
+rocket = Rocket(earth, thrust=GetThrust, mass=me+mp, TimeZoom = tz, mass=GetMass)
 earth.run(rocket)
     
