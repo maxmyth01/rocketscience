@@ -64,7 +64,7 @@ def GetThrust():
 def StartRocket():
     global Stage1Started
     global StartTime
-    if not (Stage1Started or Stage2Started)
+    if not (Stage1Started or Stage2Started):
         Stage1Started = True
         StartTime = roket.shiptime
         
