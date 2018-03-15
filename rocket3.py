@@ -18,7 +18,7 @@ mp = 395700  #propellent mass
 F1D = 716000    # single engine thrust (N)
 N1D =9    #Number of rocket engines
 
-Ftotal = F1D * N1D  # total thrust (N)
+Ftotal = F1D*N1D  # total thrust (N)
 tburn = 180  # burn time
 
 # Predict the final vleocity based on N's 2nd law
