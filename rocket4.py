@@ -26,8 +26,8 @@ tburn2 = 372
 
 mep = 13150
 
-vmax1 = Ftotal1*tburn/mp1*log((me1+mp1+me2+mp2+mep)/(me1+me2+mp2+mep))
-vmax2 = Ftotal2*tburn/mp2*log((me2+mp2+mep)/(me2+mep))
+vmax1 = Ftotal1*tburn1/mp1*log((me1+mp1+me2+mp2+mep)/(me1+me2+mp2+mep))
+vmax2 = Ftotal2*tburn2/mp2*log((me2+mp2+mep)/(me2+mep))
 
 print("predicted final staged rocket velocity (Rocket Equation), vmax:", vmax1+vmax2, "m/s")
 
