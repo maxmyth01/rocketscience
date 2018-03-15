@@ -6,7 +6,7 @@ from ggrocket import Rocket, Planet
 from math import radians, sqrt, log
 from ggmath import InputButton, Timer
 
-earth = Planet(planetass=0) # no gavity for simplification
+earth = Planet(planetass=0, veiwscale = 0.00005) # no gavity for simplification
 
 RocketStarted = False
 StartTime = None # to keep track of when burn started
@@ -47,6 +47,6 @@ def StartRocket():
     
 start = InputButton((10,400), "START", StartRocket, positioning="physical", size=15)
 
-rocket = Rocket(earth, thrust=GetThrust, mass=mp+me)
+rocket = Rocket(earth, thrust=GetThrust, mass=me+mp)
 earth.run(rocket)
     
