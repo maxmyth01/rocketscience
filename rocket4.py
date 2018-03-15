@@ -101,5 +101,5 @@ Status = Labol((10,420), GetStatus, positioning="physical", size=15)
 
 tz = Slider((10,360), 0,5,0,positioning="physical")
 
-rocket Rocket(earth,thrust=GetThrust, mass=GetMass, timezoom=tz)
+rocket= Rocket(earth,thrust=GetThrust, mass=GetMass, timezoom=tz)
 earth.run(rocket)
