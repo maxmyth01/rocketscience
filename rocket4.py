@@ -4,7 +4,7 @@
 
 from ggrocket import Rocket, Planet
 from math import radians, sqrt, log
-from ggmath import InputButton, Timer, Labol, Slider
+from ggmath import InputButton, Timer, Label, Slider
 
 earth = Planet(planetmass=0)
 
@@ -97,7 +97,7 @@ def GetStatus():
         
 start = InputButton((10,400), "START", StartRocket, positioning="physical", size=15)
 
-Status = Labol((10,420), GetStatus, positioning="physical", size=15)
+Status = Label((10,420), GetStatus, positioning="physical", size=15)
 
 tz = Slider((10,360), 0,5,0,positioning="physical")
 
