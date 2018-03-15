@@ -37,7 +37,7 @@ def GetThrust():
             return Ftotal
     else:
         return 0
-        '
+    
 def StartRocket():
     global RocketStarted
     global StartTime
