@@ -4,7 +4,7 @@
 
 from ggrocket import Rocket, Planet
 from math import radians, sqrt, log
-from gggmath import InputButton, Timer, Labol, Slider
+from ggmath import InputButton, Timer, Labol, Slider
 
 earth = Planet(planetmass=0)
 
