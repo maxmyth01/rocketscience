@@ -50,4 +50,48 @@ def GetThrust():
                 Stage1Started = False
                 Stage2Started = True
                 StartTime = rocket.shiptime
+                return Ftotal2
+            else:
+                Stage2Started = False
+                PayloadLaunched = True
+                return 0
+        else:
+            return Ftotal
+    else:
+        return 0
+        
+
+def StartRocket():
+    global Stage1Started
+    global StartTime
+    if not (Stage1Started or Stage2Started)
+        Stage1Started = True
+        StartTime = roket.shiptime
+        
+        
+def GetMass():
+    global Stage1Started
+    global Stage2Started
+    global PayloadLaunched
+    if Stage1Started:
+        return me1 + me2+mep + mp2+mp1*(tburn1-BurnTime)/tburn1
+    elif Stage2Started:
+        return me2 +mep + mp2*(tburn2-BurnTime)/tburn2
+    elif PayloadLaunched:
+        return mep
+    else:
+        return me1+mp1+me2+mp2+mep
+        
+def GetStatus():
+    global Stage1Started
+    global Stage2Started
+    global PayloadLaunched
+    if Stage1Started:
+        return "STAGE 1 FIRING"
+    elif Stage2Started:
+        return "STAGE 2 Firing"
+    elif PayloadLaunched:
+        return "PAYLOAD DELIVERED"
+    else:
+        return "WAITING FOR LAUNCH"
         
