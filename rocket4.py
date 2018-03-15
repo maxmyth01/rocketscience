@@ -66,7 +66,7 @@ def StartRocket():
     global StartTime
     if not (Stage1Started or Stage2Started):
         Stage1Started = True
-        StartTime = roket.shiptime
+        StartTime = rocket.shiptime
         
         
 def GetMass():
