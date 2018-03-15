@@ -23,7 +23,7 @@ tburn = 180  # burn time
 
 # Predict the final vleocity based on N's 2nd law
 vmax = Ftotal*tburn/(me+mp)
-print"predicted final velocity (N's 2nd law), vmax: ", vmax, "m/s")
+print("predicted final velocity (N's 2nd law), vmax: ", vmax, "m/s")
 
 def GetThrust():
     global BurnTime
