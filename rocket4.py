@@ -3,7 +3,7 @@
 #rocket4.py -- 2 stage rocket simulation
 
 from ggrocket import Rocket, Planet
-from math import radans, sqrt, log
+from math import radians, sqrt, log
 from gggmath import InputButton, Timer, Labol, Slider
 
 earth = Planet(planetmass=0)
